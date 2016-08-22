@@ -5,6 +5,8 @@
  */
 package empresadescuentos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author coste
@@ -42,6 +44,8 @@ public class EjercicioCinco extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         cmdB = new javax.swing.JButton();
         cmdR = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        lblM = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Empresa Descuentos");
@@ -53,9 +57,14 @@ public class EjercicioCinco extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtS.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtS.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSKeyTyped(evt);
+            }
+        });
         jPanel2.add(txtS, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 60, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 110, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 110, 80));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descuentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -92,20 +101,39 @@ public class EjercicioCinco extends javax.swing.JFrame {
         lblF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(lblF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 50, 20));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 190, 140));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 190, 140));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Botones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmdB.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         cmdB.setText("Borrar");
+        cmdB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdBActionPerformed(evt);
+            }
+        });
         jPanel4.add(cmdB, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, -1));
 
         cmdR.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         cmdR.setText("Resolver");
+        cmdR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdRActionPerformed(evt);
+            }
+        });
         jPanel4.add(cmdR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 260, 80));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 260, 80));
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Monto a pagar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblM.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(lblM, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 27, 60, 20));
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 110, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,6 +148,74 @@ public class EjercicioCinco extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtSKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtSKeyTyped
+
+    private void cmdBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBActionPerformed
+        // TODO add your handling code here:
+        txtS.setText("");
+        lblC.setText("");
+        lblF.setText("");
+        lblP.setText("");
+        lblS.setText("");
+        lblM.setText("");
+        txtS.requestFocusInWindow();
+    }//GEN-LAST:event_cmdBActionPerformed
+
+    private void cmdRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdRActionPerformed
+        // TODO add your handling code here:
+        String f, s, a, m, p;
+        double fo, so, ah, mo, po, su;
+
+        lblC.setText("");
+        lblF.setText("");
+        lblP.setText("");
+        lblS.setText("");
+        lblM.setText("");
+
+        if (txtS.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite el sueldo", "Error", JOptionPane.ERROR_MESSAGE);
+            txtS.requestFocusInWindow();
+        } else {
+
+            su = Double.parseDouble(txtS.getText());
+
+            if (su == 0) {
+                JOptionPane.showMessageDialog(this, "No se puede colocar cero", "Error", JOptionPane.ERROR_MESSAGE);
+                txtS.requestFocusInWindow();
+            } else {
+
+                po = (su * 1) / 100;
+                p = String.valueOf(po);
+                lblP.setText(p);
+
+                so = (su * 4) / 100;
+                s = String.valueOf(so);
+                lblS.setText(s);
+
+                fo = (su * 0.5) / 100;
+                f = String.valueOf(fo);
+                lblF.setText(f);
+
+                ah = (su * 5) / 100;
+                a = String.valueOf(ah);
+                lblC.setText(a);
+
+                mo = su - po - so - fo - ah;
+                m = String.valueOf(mo);
+                lblM.setText(m);
+            }
+        }
+    }//GEN-LAST:event_cmdRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,8 +263,10 @@ public class EjercicioCinco extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel lblC;
     private javax.swing.JLabel lblF;
+    private javax.swing.JLabel lblM;
     private javax.swing.JLabel lblP;
     private javax.swing.JLabel lblS;
     private javax.swing.JTextField txtS;
