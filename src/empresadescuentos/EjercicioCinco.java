@@ -27,17 +27,95 @@ public class EjercicioCinco extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        txtS = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblC = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblP = new javax.swing.JLabel();
+        lblS = new javax.swing.JLabel();
+        lblF = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        cmdB = new javax.swing.JButton();
+        cmdR = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Empresa Descuentos");
+        setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sueldo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtS.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jPanel2.add(txtS, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 60, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 110, 80));
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Descuentos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel1.setText("Caja de ahorro");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        lblC.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(lblC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 50, 20));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel3.setText("Politica Publica");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel4.setText("Seguro Social");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel5.setText("Seguro forzoso");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        lblP.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(lblP, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 50, 20));
+
+        lblS.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(lblS, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 50, 20));
+
+        lblF.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        lblF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(lblF, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 50, 20));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 190, 140));
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Botones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 12))); // NOI18N
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cmdB.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        cmdB.setText("Borrar");
+        jPanel4.add(cmdB, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, -1));
+
+        cmdR.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        cmdR.setText("Resolver");
+        jPanel4.add(cmdR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 260, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +157,20 @@ public class EjercicioCinco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdB;
+    private javax.swing.JButton cmdR;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblF;
+    private javax.swing.JLabel lblP;
+    private javax.swing.JLabel lblS;
+    private javax.swing.JTextField txtS;
     // End of variables declaration//GEN-END:variables
 }
